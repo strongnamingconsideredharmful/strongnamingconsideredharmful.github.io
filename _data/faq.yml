@@ -1,0 +1,28 @@
+- question: "But I heard it was good..."
+  answer: No.
+
+- question: But it was like a whole module in the MCSD course I started 5 years ago...
+  answer: No.
+
+- question: "Wait, signing things and strong naming sounds like a good idea. Convince me."
+  answer: "**insert epic speak here**"
+
+- question: But the governance committee says we need to sign our assemblies...
+  answer: |
+    Oh. Ok then.
+
+      ...
+
+    Wait. No.
+    
+    *insert reasons and workarounds here*
+
+- question: "But [cool open source project] doesn't have strong naming and I need it in my enterprise app that I absolutely need to sign..."
+  answer: |
+    Don't hassle the developer to sign their project just so you can use it. There are several workarounds that you can use:
+
+    - Use `ILDASM` and `ILASM` to sign the assemblies after the fact *examples please*
+    - Use Git submodules to fork the project into your project and build it yourself *examples please*
+    - *anything else?*
+
+
