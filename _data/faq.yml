@@ -5,7 +5,18 @@
   answer: No.
 
 - question: "Wait, signing things and strong naming sounds like a good idea. Convince me."
-  answer: "**insert epic speak here**"
+  answer: |
+    Consider this all too common occurrence:
+
+    - Your application uses an OSS component called FancyLogging and you’re depending on the latest version 2.1.5.
+    - You also use FancyServiceBus that depends on FancyLogging version 2.0.7.
+    - You might also have a dependency on FancyIoC with in turn depends on a much older version of FancyLogging 2.0.0.
+
+    Assuming that the authors of FancyLogging are following Semantic Versioning (more on this in a later post), you should be able to happily use the latest version of FancyLogging because there are no semantically breaking changes between it and the versions that FancyServiceBus and FancyIoC were compiled against. If these assemblies are strong named however, you just set yourself up for a whole lot of assembly version conflicts because .Net matches on the entire version number. At this point, you’re going to be spending some quality time with the Fusion Log Viewer (you want this in your toolbox anyway).
+
+    Strong naming conflicts are a common issue when your dependencies improve or change rapidly, and you upgrade somewhat often, and especially when upstream dependencies like log4net, IoC containers, and Newtonsoft.Json are also used by your upstream dependencies.
+
+    (more details [here](http://jeremydmiller.com/2014/04/28/fubumvc-lessons-learned-strong-naming-woes-and-workarounds/))
 
 - question: But the governance committee says we need to sign our assemblies...
   answer: |
