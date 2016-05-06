@@ -34,7 +34,7 @@
   answer: |
     Don't hassle the developer to sign their project just so you can use it. There are several workarounds that you can use:
 
-    - Use `ILDASM` and `ILASM` to sign the assemblies after the fact *examples please*
+    - Use `ILDASM` and `ILASM` to [sign the assemblies after the fact](http://stackoverflow.com/questions/1379954/how-i-do-a-sign-an-assembly-that-has-already-been-built-into-a-dll-specifically).
     - Use Git submodules to fork the project into your project and build it yourself *examples please*
     - *anything else?*
 
